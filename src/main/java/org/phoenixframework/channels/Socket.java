@@ -14,6 +14,7 @@ import java.util.List;
 import java.util.Set;
 import java.util.Timer;
 import java.util.TimerTask;
+import java.util.concurrent.CopyOnWriteArrayList;
 import java.util.concurrent.LinkedBlockingQueue;
 
 import org.slf4j.Logger;
@@ -120,7 +121,7 @@ public class Socket {
 
     private static final int DEFAULT_HEARTBEAT_INTERVAL = 7000;
 
-    private final List<Channel> channels = new ArrayList<>();
+    private final List<Channel> channels = new CopyOnWriteArrayList<>();
 
     private String endpointUri = null;
 
